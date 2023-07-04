@@ -5,6 +5,12 @@
     <title>One Page</title>
     <!-- for language -->
     <meta charset="utf-8" />
+    <title>Dil</title>
+
+    <!--for contact-->
+    <title>İletişim</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
 
     <!-- for Responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -36,6 +42,9 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar_id">
     <noscript>Bu browser javascripti desteklemiyor.</noscript>
+
+    
+    
     <!-- start codes -->
 
     <!-- start nav codes -->
@@ -48,22 +57,47 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <h1>Dil</h1>
+    <select id="languageDropdown" class="justify-content-center align-items-center">
+        <option value="tr">Türkçe</option>
+        <option value="en">English</option>
+    </select>
+    <button onclick="changeLanguage()">Dil seçiniz</button>
+
+    <p id="selectedLanguage"> </p>
+
+    <script src="script.js"></script>
+            
+
+            <div id="navbarSupportedContent" class="collapse navbar-collapse" >
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+                        <a class="nav-link active"  href="index.html">Anasayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link active" aria-current="page" href="#works">Çalışmalarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Haberler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Blog</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <i class="fa-regular fa-user text-primary"></i>
+                            <i class="fa-regular fa-user text-white"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginId">Login</a></li>
-                            <li><a class="dropdown-item" href="#">Register</a></li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registerId">Register</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -79,17 +113,18 @@
                 <form class="d-flex" role="search">
                     <input id="tags" class="form-control me-2" type="search" placeholder="Arama İçin ..."
                         aria-label="Search">
-                    <button class="btn btn-primary" type="submit">Ara</button> <!-- btn-outline-success
+                    <button class="btn btn-warning" type="submit">Ara</button> <!-- btn-outline-success
               -->
                 </form>
             </div>
         </div>
+        
     </nav>
     <!-- end nav codes -->
 
-    <!-- Login -->
+    <!-- Register -->
     <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-    <div class="modal fade" id="loginId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+    <div class="modal fade" id="registerId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
         aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -101,14 +136,25 @@
                     <form>
                         <!-- Name input -->
                         <div class="form-outline mb-4">
+                            <label class="form-label" for="form5Example1">Username</label>
                             <input type="text" id="form5Example1" class="form-control" />
-                            <label class="form-label" for="form5Example1">Name</label>
                         </div>
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="form5Example2" class="form-control" />
                             <label class="form-label" for="form5Example2">Email address</label>
+                            <input type="email" id="form5Example2" class="form-control" />
+                        </div>
+
+                        <!-- Password correct input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form5Example2">Password</label>
+                            <input type="password" id="form5Example2" class="form-control" />
+                        </div>
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form5Example2">Password</label>
+                            <input type="password" id="form5Example2" class="form-control" />
                         </div>
 
                         <!-- Checkbox -->
@@ -118,10 +164,13 @@
                                 I have read and agree to the terms
                             </label>
                         </div>
-
-                        <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-block mb-4">Subscribe</button>
                     </form>
+                <!-- Submit button -->
+                <div class="row text-center align-items-center justify-content-center">
+                    <div class="col-8">
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+                    </div>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
@@ -129,10 +178,57 @@
             </div>
         </div>
     </div>
+ <!-- Register Ends-->
+    <!--Login-->
+    <div class="modal fade" id="loginId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+    aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form5Example1">Username</label>
+                        <input type="text" id="form5Example1" class="form-control" />
+                    </div>
 
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form5Example2">Password</label>
+                        <input type="password" id="form5Example2" class="form-control" />
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="form-check d-flex justify-content-center mb-4">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="form5Example3" checked />
+                        <label class="form-check-label" for="form5Example3">
+                            I have read and agree to the terms
+                        </label>
+                    </div>
+                </form>
+                <!-- Submit button -->
+            <div class="row text-center align-items-center justify-content-center">
+                <div class="col-8">
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+     <!--Login-->
     <!-- start header codes -->
     <!-- div.text-white>div.container>div.p-5.text-uppercase.display-4{Frontend Eğitimimize Hoşgeldiniz}+h4{Html5 Css3 JS React}+a.btn.btn-primary+a.btn.btn-danger+a.btn.btn-success -->
-    <header id="header_id">
+    <header id="header_id" class="sections">
         <div class="text-white">
             <div class="container text-center">
                 <div class="p-5 text-uppercase display-4">Frontend Eğitimimize Hoşgeldiniz</div>
@@ -149,8 +245,8 @@
     <main id="main_id">
         <!-- messages start -->
         <!-- section#messages>div>h2.text-center.text-uppercase{Çalışmalarımız}^div.container>div.row>div.text-center.col-12.col-md-4.col-xl-3>i+h4{Html5}+p{lorem15}+button.btn.btn-primary{Daha fazla ..} -->
-        <section id="messages">
-            <div>
+        <section id="works" class="sections" >
+                <div>
                 <h2 class="myHeading">Çalışmalarımız</h2>
             </div>
             <div class="container">
@@ -158,28 +254,28 @@
                     <div class="text-center col-12 col-md-4 col-xl-3 mb-4">
                         <i class="fa-brands fa-html5"></i>
                         <h4>Html5</h4>
-                        <p class="line-clamp4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
+                        <p class="line-clamp4 text-dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
                         <button class="btn btn-primary">Daha fazla ..</button>
                     </div>
 
                     <div class="text-center col-12 col-md-4 col-xl-3 mb-4">
                         <i class="fa-brands fa-css3 text-danger"></i>
                         <h4>Css3</h4>
-                        <p class="line-clamp4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
+                        <p class="line-clamp4 text-dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
                         <button class="btn btn-primary">Daha fazla ..</button>
                     </div>
 
                     <div class="text-center col-12 col-md-4 col-xl-3 mb-4">
                         <i class="fa-brands fa-js"></i>
                         <h4>JavaScript</h4>
-                        <p class="line-clamp4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
+                        <p class="line-clamp4 text-dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
                         <button class="btn btn-primary">Daha fazla ..</button>
                     </div>
 
                     <div class="text-center col-12 col-md-4 col-xl-3 mb-4">
                         <i class="fa-brands fa-react text-success"></i>
                         <h4>React JS</h4>
-                        <p class="line-clamp4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
+                        <p class="line-clamp4 text-dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet sed in dolore, voluptas voluptatum recusandae.</p>
                         <button class="btn btn-primary">Daha fazla ..</button>
                     </div>
                 </div>
@@ -189,7 +285,7 @@
 
          <!-- parallax start -->
          <!-- section#parallax>div.container>div.row>h2.myHeading{Haberler}+p{lorem*12}+button.btn.btn-primary -->
-         <section id="parallax">
+         <section id="parallax" class="sections" style="height: 90vh;">
             <div class="container">
                 <div class="row">
                     <h2 class="myHeading">Hakkımızda</h2>
@@ -216,7 +312,7 @@
 
               <!-- newspaper start -->
          <!-- section#newspaper>div.container>div.row>h2.myHeading{Haberler}+p{lorem*12}+button.btn.btn-primary -->
-         <section id="newspaper">
+         <section id="newspaper" class="sections">
             <div class="container">
                 <div class="row">
                     <h2 class="myHeading">Yeni Haberler</h2>
@@ -240,7 +336,7 @@
          </section>
           <!-- newspaper end -->
 
-          <section id="blog">
+          <section id="blog" class="sections">
             <div class="container">
                 <div class="row">
                     <h2 class="myHeading">Blog</h2>
@@ -386,7 +482,50 @@
           <!-- newspaper end -->
 
            <!-- newspaper start -->
-          <section id="contact"></section>
+           <section id="contact" class="sections"></section>
+           <div class="container">
+            <h1>İletişim</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Sol taraftaki harita -->
+                    <h3>Konum</h3>
+                    <div id="map"></div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Sağ taraftaki iletişim formu -->
+                    <h3>İletişim Bilgileri</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="fullName">Adı Soyadı</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Adınız Soyadınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Telefon Numarası</label>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Telefon Numaranız">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı yazın"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://www.google.com/maps/@53.540743,10.0714698,14z?entry=ttu" async defer></script>
+        <script>
+            // Harita oluşturma fonksiyonu
+            function initMap() {
+                var mapOptions = {
+                    center: {lat: 40.712776, lng: -74.005974}, // Haritanın merkez koordinatları
+                    zoom: 12 // Yakınlaştırma düzeyi
+                };
+    
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            }
+        </script>
+
            <!-- newspaper end -->
     </main>
    
