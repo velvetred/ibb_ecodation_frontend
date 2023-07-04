@@ -9,7 +9,11 @@ Version : v.1
 /* Root */
 :root{
     --templateBgColor:rgb(43, 43, 43);
+    --padding: 0.5rem 1rem;
+    --background: #b3b1b1;
 }
+
+
 
 /*######################################################*/
 /* Common Property */
@@ -99,6 +103,7 @@ p{
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden; 
+    color: black;
 }
 
 .line-clamp5{
