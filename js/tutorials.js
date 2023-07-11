@@ -1,177 +1,168 @@
-// JS 1995 yılında Brandan Eich tarafından yazılıyor.
-// Cross platform
-// OOP uygun.
+//JS 1995 yılında Brandan Eich tarafından yazılıyor.
+// Cross platform.
+//OOP uygun.
+
 
 //single Comment
 /*
 multiple Comment
 */
 
-// console.log("loglama");
-// console.info("info");
-// console.warn("warn");
-// console.error("error");
+//console.log("loglama");
+//console.info("info");
+//console.warn("warn");
+//console.error("error");
 
-// alert("pop-up bilgilendirme-1");
-// window.alert("pop-up bilgilendirme-2");
-// window.document.writeln("ekranda yazı");
+//alert("pop-up bilgilendirme-1");
+//window.alert("pop-up bilgilendirme-2");
+//window.document.writeln("ekranda yazı");
 
 // Variable
-// var result=4423;
-// console.log(typeof result+" => "+result);
+// var result="Js öğreniyorum" ;
+// console.log(result);
+
+// var result=4423 ;
+// console.log(typeof result+ "->" +result);
 
 // var result=44.23;
-// console.log(typeof result+" => "+result);
+// console.log(result);
+ 
+// var result=true ;
+// console.log(result);
 
-// var result="Js öğreniyorum";
-// console.log(typeof result+" => "+result);
-
-// var result=true;
-// console.log(typeof result+" => "+result);
-
-// Naming Convensition
-// var deneme="JS Data";
+// //Naming Convensition
+// var deneme="JS Data" ;
 // console.log(deneme);
 
-// var deneme44="JS Data";
-// console.log(deneme44);
 
-// var $deneme44="JS Data";
-// console.log($deneme44);
+// //  whoisting
 
-// var _$deneme44="JS Data";
-// console.log(_$deneme44);
+// result3=56;
+// var result3;
 
-// var denemeVerisi="JS Data";
-// console.log(denemeVerisi);
-
-//var &~44$deneme44="JS Data";
-//console.log(44$deneme44);
-
-// interpreter, compiler 
-// senkron, asenkron ?
-
-// whoisting
-// result2=56;
-// var result2;
-
-///////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 // Operators
-// + - * ** / %
-// ! DEĞİL &&=VE ||=VEYA
-// x++
-// x--
-// ++x
-// --x
+ // + - * ** / % (mod)
+ // ! DEĞİL &&=VE ||=VEYA
+ // x++
+ // x--
+ // ++x
+ // --x
 
-// =   ATAMA
-// ==  EŞİT  (TÜRÜNE BAKMA)
-// === EŞİT  (TÜRÜNE BAK)
+ // = ATAMA
+ // == EŞİT(TÜRÜNE BAKMA)
+ // === EŞİT(TÜRÜNE BAK)
 
-// var number1=40;
-// var number2=5;
-// console.log(number1+number2);
-// console.log(number1-number2);
-// console.log(number1*number2);
-// console.log(number1/number2);
-// console.log(number1%number2);
+//  var number1=40;
+//  var number2=5;
 
-// cast
-// Number
-// String()
-// var userData=Number(prompt("Lütfen sayı giriniz"));
-// console.log(userData+45);
+//  console.log(number1+number2);
+//  console.log(number1-number2);
+//  console.log(number1*number2);
+//  console.log(number1/number2);
+//  console.log(number1%number2);
 
-// undefined
-// var result4;
-// console.log(result4);
+//  //cast
+//  // Number
+//  // String()
 
-// // NaN: Not A Number
-// var result5="asd"/4;
-// console.log(result5);
+//  var userData= Number (prompt("lütfen sayı giriniz"));
+//  console.log(userData+45);
 
-// // isNaN
-// var result6=4;
-// console.log(isNaN(result6)); //false: sayıdır
+//  //undefined
+//  var result4;
+//  console.log(result4);
 
-// // Infinity
-// console.log(4/0);
+//  // NaN: not a number
+//  var result5= asd/4;
+//  console.log(result5);
+
+//  // isNaN
+
+//  var result6=4;
+//  console.log(isNaN(result6)); //false:sayıdır
+
+//  // Infinity
+//  console.log(4/0);
 
 ///////////////////////////////////////////////////
 // Math
 // console.log(Math.PI);
 // console.log(Math.E);
-// console.log(Math.min(4,1,99,555,25,-100));
-// console.log(Math.max(4,1,99,555,25,-100));
-
+// console.log(Math.min(4,1,99,55,35,-100));
 // console.log(Math.sqrt(16));
 // console.log(Math.abs(-25));
 // console.log(Math.pow(2,5));
-
 // console.log(Math.floor(3.9));
-// console.log(Math.ceil(3.1));
-// console.log(Math.round(6.4));
-// console.log(Math.round(6.5));
+// console.log(Math.ceil(2.5));
+// console.log(Math.round(6.5)); //sin,cos,tan
+// console.log(Math.round(random()*9+1));
 
-// console.log(Math.sin(45));
-// console.log( Math.round(Math.random()*9+1));
-
-//Örnek-4: Aşağıdaki örnekleri math ile çözelim ?
-// -5.9 sayıyının aşağıdaki işlemleri yaptıralım ?
-// 1-mutlak değeri alsın 5.9
-// 2-yuvarlama yapsın  6.0
-// 3-karesini alsın 36.00
-// 4-karekök alsın 6.0
-// 5-yuvarlama yapsın 6.0
-// 6-)çıkan sonucu 5 bölsün 6/5=1
-// 7-) iki sayı arasından karşılaştırma yapsın en küçüğünü alsın ve 1 ve 5
-// 8-) küçük sayı eğer tekse 3 eklesin çiftse 5 eklesin 
-
+//-5.9 sayısına aşağıdaki işlemleri yap
+// 1) mutlak değeri alınsın
+console.log(Math.abs(-5.9));
+// 2) yuvarlama yapsın
+console.log(Math.ceil(5.9));
+// 3)karesini alın
+console.log(Math.sqrt(6));
+// 4) karekök alsın
+console.log(Math.sqrt(5.9));
+// 5) yuvarlama yapsın
+console.log(Math.round(5.9));
+// 6) çıkan sonucu 5 bölsün
+console.log(6/5);
+// 7) 2 sayıyı karşılaştır küçüğü al
+console.log(Math.min(1,6));
+// 8) küçük sayı eğer tekse 3 eklesin çiftse 5
+var number1=1
+if (number1%2==0) {
+    console.log(number1+5)
+}
+else(console.log(number1+3))
 // Örnek-5 : kullanıcı tarafından girilen bir sayıyı negatif mi pozitif mi olduğu ekran yazdıran algoritma ?
 //NOT: cast kullalım ?
 
 // Örnek-6 : kullanıcı tarafından password ve repassword alalım sonrasında bu iki değeri karşılaştırma yapalım
 //eğer aynı girilirse aynı veri yoksa birbirine uymadı yazan algoritma yapalım
 
-///////////////////////////////////////////////////
-// Number 
+
+
+
+
+
+
+
+
+// // Number
 // var sayi=15000;
 // console.log(sayi);
 
 // var sayi2=1.5E+4;
 // console.log(sayi2);
+// //binary: 0-1
+//  var binary=0b0001
+//  console.log(binary);
+// // octal : 0-1-2-3-4-5-6-7
+//  var octal=0o7612
+//  console.log(octal);
+// // decimal : 0-1-2-3-4-5-6-7-8-9
+//  var decimal=123456
+//  console.log(decimal);
 
-// binary,octal,decimal, hexadecimal
-
-// binary : 0-1
-// var binary=0b00011;
-// console.log(binary);
-
-// octal : 0-1-2-3-4-5-6-7
-// var octal=0o7612;
-// console.log(octal);
-
-// decimal : 0-1-2-3-4-5-6-7-8-9
-// var decimal=123456;
-// console.log(decimal);
-
-// hexdecimal : 0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F
-// var hexadecimal=0xffa;
+// //hexadecimal : 0-1-2-3-4-5-6-7-8-9--A-B-C-D-E-F
+// var hexadecimal=0o7612
 // console.log(hexadecimal);
 
-// Number() parseInt() nedir aralarındaki farklar ?
-// String() data.toString nedir aralarındaki farklar ?
-// Cast
-// database, port , api (string)
-// console.log(Number("10")+10);
-// console.log(parseInt("10")+10);
+//  // Cast
+//  //database, port, api (string)
+//  console.log(Number("10")+10);
+//  console.log(parseInt("10")+10);
+ 
+//  console.log(String(30)+10);
+//  var number=30;
+//  console.log(number.toString+10);
 
-// console.log(String(30)+10);
-// var number=30;
-// console.log(number.toString()+10);
-
-///////////////////////////////////////////////////
-// var, let, const
+//var,let,const
 
 // var data1=11;
 // console.log(data1);
@@ -180,196 +171,181 @@ multiple Comment
 // console.log(data1);
 
 // let data2=33;
-// console.log(data2);
-
-// let data3=33;
-// data3=44;
-// console.log(data3);
+// consolelog(data2);
+// let data3=44;
+// console.log(data3);  //let aynı yazıma izin vermez.
 
 // const data4=55;
 // console.log(data4);
 
-// const data5=55;
-// data5=66;
-// console.log(data5);
+// const data4=55;
+// console.log(data4); //const sabit birdaha değiştiremezsin
 
-///////////////////////////////////////////////////
+
 // string
-// let str="js ÖĞreniyorum js ";
-// console.log(str);
-
+// let str="js öğreniyorum js";
 // console.log(str.length);
 // console.log(str.trim().length);
-
 // console.log(str.toLowerCase());
 // console.log(str.toUpperCase());
-
 // console.log(str.charAt(0));
-
 // console.log(str.indexOf("js"));
 // console.log(str.lastIndexOf("js"));
-
 // console.log(str.concat("sona"));
 // console.log(str.replace(str,"değiştir"));
-
 // console.log(str.substring(1));
 // console.log(str.substring(0,4));
 
-// Ödev 
-// ÖDEV NOT:5 adımı beraber yapalım.
+
+
+//ÖDEV
+// ÖDEV NOT:5 adımı beraber yapalım
 // kullanıcı tarafından girilen bir kelimenin (prompt)
-// let userData= prompt("Lütfen bir şeyler yazınız");
+
 // S-1) Kaç karakterlidir ? (length)
+let userData= prompt("Lütfen bir şeyler yazınız");
+console.log(userData.length);
 // S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
+
+console.log(userData.trim().length);
 // S-3) bütün kelimeyi küçük harfle göstermek ? (toLowerCase())
+
+console.log(userData.toLowerCase());
 // S-4) bütün kelimeyi büyük harfle göstermek ? (toUpperCase())
+
+console.log(userData.toUpperCase());
 // S-5) Kullanıcıdan alınan ilk kelimeyle , "javascript" kelimeyle değiştirin. (replace, substring, indexOf)
+
+console.log(userData.replace(userData,"javascript"));
 // console.log(userData.replace("xxxxxxx"),"javascript");
 // console.log(userData.replace(userData.substring(0,userData.indexOf(" ")),"javascript"));
 // S-6) yazdığınız kelimede "javascript ile mi başlıyor" ? (startsWith()) 
+console.log(userData.startsWith("javascript"));
 // S-7) yazdığınız kelimede "javascript ile mi bitiyor" ? (endsWith())
+console.log(userData.endsWith("javascript"));
 // S-8) ilk harf nedir  ? (charAt())
+console.log(userData.charAt());
 // S-9) girdiğiniz kelimenin sonuna "-ben js öğreniyorum" (concat())
+console.log(userData.concat("-ben js öğreniyorum"));
 // S-10) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin? (subString())
+console.log(userData.substring(0,4));
 
-///////////////////////////////////////////////////
 // Function (Normal)
-// 1 retursuz Parametresiz
-// function retursuzParametresiz() {
-//     console.log("deneme");
-// }
-// retursuzParametresiz();
 
-// // 2 retursuz Parametresiz
-// function retursuzParametreli(adi) { // parametre: adi
-//     console.log("deneme " + adi);
+// function returnsuzParametresiz(){
+//     console.log("deneme"); //CamelCasee göre yaz isim yapısında yaz
 // }
-// retursuzParametreli("HamitM") // argüman: "HamitM"
+// returnsuzParametresiz();
 
-// // 3 retursuz Parametresiz
-// function returnluParametresiz() {
+// function returnsuzParametreli(adi){
+// console.log("deneme"+adi);
+// }
+// returnsuzParametreli ("HamitM") //argüman: "HamitM"
+
+// function returnsuzParametresiz(){
 //     return "deneme55";
-// }
-// let result3 = returnluParametresiz();
-// console.log(result3);
 
-// // 4 retursuz Parametresiz
-// function returnluParametreli(soyadi) {
-//     return "deneme66 " + soyadi;
+// }
+// let result3= returnluParametresiz();
+// console.log(result)3;
+
+// function returnluParametreli (soyadi){
+//     return "deneme66" +soyadi;
 // }
 // let result4 = returnluParametreli("Mizrak");
 // console.log(result4);
 
-///////////////////////////////////////////////////
-// // Normal Function
-// function normal() { }
+// function normal(){}
 
 // // Anonymous (Function)
-// let anonymous = function () { }
-
+// let anonymous =function(){}
 // // Arrow (Function)
-// let arrow = () => { }
+// let arrow=() => {}
 
-///////////////////////////////////////////////////
-// let veya const
+//let veya const
 // arrow function
 
-///////////////////////////////////////////////////
-// function deneme1(){
-//     console.log("normal function");
-// }
-// deneme1();
 
-// const deneme2= function (){
-//     console.log("anonymous function");
-// }
-// deneme2();
-
-// const deneme3=  ()=>{
-//     console.log("arrow function function");
-// }
-// deneme3();
-
-// Immedia Function ()();
+// Immedia Function()();
 // (function(){
 //     console.log("deneme4");
 // })();
 
-///////////////////////////////////////////////////
 // condition
-const condi = () => {
-    let number = 4;
-    if (number >= 2) {
-        console.log("Büyüktür");
-    } else {
-        console.log("Küçüktür");
-    }
-}
-//condi();
+// const condi = () => {
+//     let number = 4;
+//     if (number >= 2) {
+//         console.log("Büyüktür");
+//     } else {
+//         console.log("Küçüktür");
+//     }
+// }
+// condi();
 
-const condi2 = () => {
-    let number = 4;
-    if (number >= 2)
-        console.log("Büyüktür");
-    else
-        console.log("Küçüktür");
+// const condi2 = () => {
+//     let number = 4;
+//     if (number >= 2)
+//         console.log("Büyüktür");
+//     else
+//         console.log("Küçüktür");
 
-}
-//condi2()
+// }
+// condi2()
 
-const condi3 = () => {
-    let number = 4;
-    let result = (number >= 2) ? "Büyüktür" : "Küçüktür";
-    console.log(result);
-}
-//condi3()
+// const condi3 = () => {
+//     let number = 4;
+//     let result = (number >= 2) ? "Büyüktür" : "Küçüktür";
+//     console.log(result);
+// }
+// condi3()
 
-const condi4 = () => {
-    let number = 4;
-    console.log((number >= 2) ? "Büyüktür" : "Küçüktür");
-}
-//condi4();
+// const condi4 = () => {
+//     let number = 4;
+//     console.log((number >= 2) ? "Büyüktür" : "Küçüktür");
+// }
+// condi4();
 
-const condi5 = () => {
-    let number = 4;
-    if (number == "1") {
-        console.log("1");
-    } else if (number == 2) {
-        console.log("2");
-    } else if (number == 3) {
-        console.log("3");
-    } else if (number === 4) {
-        console.log("4");
-    } else {
-        console.log("1<=X<=5 dışındadır");
-    }
-}
-//condi5();
+// const condi5 = () => {
+//     let number = 4;
+//     if (number == "1") {
+//         console.log("1");
+//     } else if (number == 2) {
+//         console.log("2");
+//     } else if (number == 3) {
+//         console.log("3");
+//     } else if (number === 4) {
+//         console.log("4");
+//     } else {
+//         console.log("1<=X<=5 dışındadır");
+//     }
+// }
+// condi5();
 
-const condi6 = () => {
-    let number = 4;
-    // break   : döngü kırmak
-    // return  : metot kırmak
-    // continue: 1 kereye mahsus es geç sonra döngüye devam et.
-    switch (number) {
-        case 1:
-            console.log("1");
-            break; // döngü kırmak
-        case 2:
-            console.log("2");
-            break;
-        case 3:
-            console.log("3");
-            break;
-        case 4:
-            console.log("4");
-            break;
-        default:
-            console.log("1<=X<=5 dışındadır");
-            break;
-    }
-}
-//condi6();
+// const condi6 = () => {
+//     let number = 4;
+// break   : döngü kırmak
+// return  : metot kırmak
+// continue: 1 kereye mahsus es geç sonra döngüye devam et.
+//     switch (number) {
+//         case 1:
+//             console.log("1");
+//             break; // döngü kırmak
+//         case 2:
+//             console.log("2");
+//             break;
+//         case 3:
+//             console.log("3");
+//             break;
+//         case 4:
+//             console.log("4");
+//             break;
+//         default:
+//             console.log("1<=X<=5 dışındadır");
+//             break;
+//     }
+// }
+// condi6();
+
 ///////////////////////////////////////////////////////
 // ÖDEV: 
 // Kullanıcı tarafından girilen bir sayının negatif mi, pozitif mi ? bunu yazan JS code yazınız.
@@ -495,23 +471,23 @@ let sumExamplesData = () => {
             //evenSum = evenSum+i;
             evenSum += i;
             evenCounter++;
-            evenNumber = evenNumber + " " + i;
+            evenNumber = evenNumber+" "+i;
         } else {
             oddSum += i;
             oddCounter++;
-            oddNumber = oddNumber + " " + i;
+            oddNumber = oddNumber+" "+i;
         }
-        commonSum += i;
+        commonSum+=i;
     } // end for
-    console.log("Toplam: " + commonSum);
+    console.log("Toplam: "+commonSum);
 
-    console.log("Tek sayılar: " + oddNumber);
-    console.log("Tek sayı adedi: " + oddCounter);
-    console.log("Tek sayı toplam: " + oddSum);
+    console.log("Tek sayılar: "+oddNumber);
+    console.log("Tek sayı adedi: "+oddCounter);
+    console.log("Tek sayı toplam: "+oddSum);
 
-    console.log("Çift sayılar: " + evenNumber);
-    console.log("Çift sayı adedi: " + evenCounter);
-    console.log("Çift sayı toplam: " + evenSum);
+    console.log("Çift sayılar: "+evenNumber);
+    console.log("Çift sayı adedi: "+evenCounter);
+    console.log("Çift sayı toplam: "+evenSum);
 } // end sumExamplesData
 //sumExamplesData()
 
@@ -527,6 +503,11 @@ let sumExamplesData = () => {
 
 //örnek-3 operatör işlemleri: aşağıdaki örneği javascript ile yapalım
 //4+3*2(3:3-1*6+9:1+(3:3))
+// İfadeyi hesapla
+var sonuc = 4 + 3 * 2 * (3 / 3 - 1 * 6 + 9 / 1 + (3 / 3));
+
+// Sonucu yazdır
+console.log("Sonuç: ", sonuc);
 
 ////////////////////////////////////////////////////////
 // ÖDEV
@@ -538,25 +519,26 @@ let sumExamplesData = () => {
 // H**** MIZ***
 // ipucu: charAt, substring, indexOf, döngü, karar mekanizma
 
-let usernameAndSurnameMasking = () => {
-    const usernameAndSurname = prompt("Lütfen adınızı ve soyadınızı giriniz");
+let usernameAndSurnameMasking=()=>{
+    const usernameAndSurname=prompt("Lütfen adınızı ve soyadınızı giriniz");
 
-    const userIndex = usernameAndSurname.indexOf(" ");
-    let username = usernameAndSurname.substring(0, userIndex);
+    const userIndex=usernameAndSurname.indexOf(" ");
+    let username=usernameAndSurname.substring(0,userIndex);
     for (let i = 1; i < username.length; i++) {
-        username = username.replace(username.charAt(i), "*");
+      username=username.replace(username.charAt(i),"*");
     }
-    username = username.toUpperCase()
+    username= username.toUpperCase()
     console.log(username.toUpperCase());
 
-    let surname = usernameAndSurname.substring(userIndex + 1, usernameAndSurname.length).toUpperCase();
-    for (let i = 3; i <= username.length; i++) {
-        surname = surname.replace(surname.charAt(i), "*");
+    let surname=usernameAndSurname.substring(userIndex+1,usernameAndSurname.length).toUpperCase();
+    for (let i = 3; i <=username.length; i++) {
+        surname=surname.replace(surname.charAt(i),"*");
     }
     console.log(surname);
-    console.log(username.concat(" ").concat(surname));
+    console.log(username.concat(" ").concat(surname)  );
 }
-//usernameAndSurnameMasking();
+usernameAndSurnameMasking();
+
 
 ////////////////////////////////////////////////////////
 // software  prensible
@@ -729,11 +711,3 @@ bu şarta uyan kaç tane sayı vardır ?
 // obje
 // dom
 // jquery ajax GET/POST
-
-
-
-
-
-
-
-
