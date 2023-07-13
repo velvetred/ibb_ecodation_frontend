@@ -1,0 +1,74 @@
+#ust-kisim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+  }
+#vergi-hesaplama {
+    text-align: left;
+    flex-grow: 0;
+    margin-right: auto;
+  }
+  
+  
+  html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.navbar {
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: red;
+}
+#vergi-bolumu {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #vergi-bolumu h2 {
+    margin-bottom: 10px;
+  }
+  #vergi-cubugu {
+    width: 100%;
+    height: 30px;
+    background-color: #f2f2f2;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .bolme {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(254, 184, 5);
+    cursor: pointer;
+    border: 2px solid rgb(254, 184, 5);
+    background-color: white;
+  }
+  .bolme.active {
+    background-color: rgb(243, 161, 38);
+  }
+  
+  
+  .bolme:last-child {
+    border-right: none;
+  }
+  
+  .bolme.gir {
+    background-color: #ff9c45;
+    color: #fff;
+  }
+  .form-control{
+    margin: 3vh;
+  }
+  .form-label{
+    padding: 2%;
+  }
+
